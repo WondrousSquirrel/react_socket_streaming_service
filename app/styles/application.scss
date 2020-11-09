@@ -1,3 +1,77 @@
+
+
+body {
+    background-color: #f6f7f6;
+}
+
 .stock-ticker {
+    height: 100%;
     text-align: center;
 }
+
+.card {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    padding: 2%, 0, 2%, 0;
+    background-color: #272921;
+    color: #f6f7f6;
+    grid-template-columns: 80% 20%;	
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.diff-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.red-text {
+    color: red;
+}
+.green-text {
+    color: green;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th:nth-child(1) {
+    width: 10%;
+}
+thead th:nth-child(2) {
+    width: 10%;
+}
+thead th:nth-child(3) {
+    width: 8%;
+}
+thead th:nth-child(3) {
+    width: 8%;
+}
+thead th:nth-child(4) {
+    width: 10%;
+}
+thead th:nth-child(5) {
+    width: 15%;
+}
+thead th:nth-child(6) {
+    width: 30%;
+}
+thead th:nth-child(7) {
+    width: 10%;
+}
+thead th:nth-child(8) {
+    width: 10%;
+}
+
+th, td {
+    padding: 1rem;
+  }
