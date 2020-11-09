@@ -8,13 +8,19 @@ import DevTools from '../containers/DevTools';
 export const history = createBrowserHistory();
 const middleware = routerMiddleware(history);
 
-export function configureStore(initialState) {
-    return createStore(
-        rootReducer(history),
-        initialState,
-        compose(
-            applyMiddleware(thunkMiddleware, middleware),
-            DevTools.instrument()
-        )
-    );
+const initialState = {
+    ticker: []
+};
+
+export const store = createStore(
+    rootReducer(history),
+    initialState,
+    compose(
+        applyMiddleware(thunkMiddleware, middleware),
+        DevTools.instrument()
+    )
+);
+
+export function configureStore() {
+    return store;
 }

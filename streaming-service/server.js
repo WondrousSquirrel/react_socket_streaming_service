@@ -30,9 +30,9 @@ function getUTCDate() {
 }
 
 function getQuote(socket, ticker) {
-  var dataObj;
+  let dataObj;
 
-  var quote = {};
+  let quote = {};
   quote.ticker = ticker;
   quote.exchange = 'NASDAQ';
   quote.price = getRandomValBetween(100, 300, 2);
@@ -41,8 +41,8 @@ function getQuote(socket, ticker) {
   quote.last_trade_time = getUTCDate();
   quote.dividend = getRandomValBetween(0, 1, 2);
   quote.yield = getRandomValBetween(0, 2, 2);
-
-  socket.emit(ticker, PRETTY_PRINT_JSON ? JSON.stringify(quote, null, 4) : JSON.stringify(quote));
+ // JSON.stringify(quote) - why?
+  socket.emit(ticker, quote);
 }
 
 function trackTicker(socket, ticker) {
