@@ -13,10 +13,9 @@ body {
     display: grid;
     width: 80%;
     margin: auto;
-    padding: 2%, 0, 2%, 0;
     background-color: #272921;
     color: #f6f7f6;
-    grid-template-columns: 80% 20%;	
+    grid-template-columns: 85% 15%;
 }
 
 .card-body {
@@ -28,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .red-text {
@@ -42,6 +41,7 @@ table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
 }
 
 thead th:nth-child(1) {
@@ -53,9 +53,7 @@ thead th:nth-child(2) {
 thead th:nth-child(3) {
     width: 8%;
 }
-thead th:nth-child(3) {
-    width: 8%;
-}
+
 thead th:nth-child(4) {
     width: 10%;
 }
@@ -74,4 +72,69 @@ thead th:nth-child(8) {
 
 th, td {
     padding: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .card {
+      font-size: 10px;
+    }
+    th, td {
+        padding: 10px;
+    }
   }
+
+@media screen and (max-width: 980px) {
+    .card {
+        width: 90%;
+        grid-template-columns: 90% 10%;
+    }
+    .diff-info {
+        font-size: 0.8rem !important;
+    }
+
+    thead th:nth-child(1) {
+        width: 6%;
+    }
+    thead th:nth-child(2) {
+        width: 10%;
+    }
+    thead th:nth-child(3) {
+        width: 5%;
+    }
+    thead th:nth-child(4) {
+        width: 5%;
+    }
+    thead th:nth-child(5) {
+        width: 15%;
+    }
+    thead th:nth-child(6) {
+        width: 30%;
+    }
+    thead th:nth-child(7) {
+        width: 8%;
+    }
+    thead th:nth-child(8) {
+        width: 8%;
+    }
+    .diff-info {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .card {
+        width: 100%;
+    }
+
+    table {
+        font-size: 10px !important;
+    }
+
+    thead th:nth-child(5) {
+        width: 12%;
+    }
+    thead th:nth-child(6) {
+        width: 25%;
+    }
+}

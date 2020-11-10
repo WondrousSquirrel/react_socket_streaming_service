@@ -1,4 +1,5 @@
 import io from 'socket.io-client';
+import { recieveDataAction } from '../actions/action';
 import { store } from '../store/configureStore.dev';
 let socket = null;
 
@@ -9,10 +10,7 @@ export const connect = (stockSymbol) => {
         console.log('connected');
 
         socket.on(stockSymbol, (data) => {
-            store.dispatch({
-                type: 'RECIEVE_DATA',
-                payload: data
-            });
+            store.dispatch(recieveDataAction(data));
         });
 
         socket.emit('ticker', stockSymbol);

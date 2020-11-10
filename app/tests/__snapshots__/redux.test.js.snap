@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should create an action to add a todo 1`] = `
+Object {
+  "payload": "test case",
+  "type": "RECIEVE_DATA",
+}
+`;
+
+exports[`reducers Initial State always pass 1`] = `
+Object {
+  "price": 0,
+}
+`;
+
+exports[`reducers recieve Ddata returns the correct state 1`] = `
+Object {
+  "data": 1,
+}
+`;
