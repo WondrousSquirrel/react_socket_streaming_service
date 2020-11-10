@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Data from './Data';
 
-connectToWS('AAPL');
+if(process.env.NODE_ENV !== 'test') connectToWS('AAPL');
 
 const App = (data) => {
     return (
