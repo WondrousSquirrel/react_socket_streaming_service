@@ -12,11 +12,10 @@ function usePrevious(value) {
 }
 
 const Data = ({data}) => {
-    const ticker = data.data;
-    const prevPrice = ticker ? usePrevious(ticker.price) : 0;
-    const priceDiff = prevPrice === 0 ? 0 : ticker.price - prevPrice;
+    const prevPrice = data ? usePrevious(data.price) : 0;
+    const priceDiff = prevPrice === 0 ? 0 : data.price - prevPrice;
     return (
-        ticker ?
+        data ?
             <div className="card">
                 <div className="card-body">
                     <table>
@@ -34,14 +33,14 @@ const Data = ({data}) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">{ticker.ticker}</th>
-                                <th scope="row">{ticker.exchange}</th>
-                                <th scope="row">{ticker.price}</th>
-                                <th scope="row">{ticker.change}</th>
-                                <th scope="row">{ticker.change_percent}</th>
-                                <th scope="row">{ticker.last_trade_time}</th>
-                                <th scope="row">{ticker.dividend}</th>
-                                <th scope="row">{ticker.yield}</th>
+                                <th scope="row">{data.ticker}</th>
+                                <th scope="row">{data.exchange}</th>
+                                <th scope="row">{data.price}</th>
+                                <th scope="row">{data.change}</th>
+                                <th scope="row">{data.change_percent}</th>
+                                <th scope="row">{data.last_trade_time}</th>
+                                <th scope="row">{data.dividend}</th>
+                                <th scope="row">{data.yield}</th>
                             </tr>
                         </tbody>
                     </table>
